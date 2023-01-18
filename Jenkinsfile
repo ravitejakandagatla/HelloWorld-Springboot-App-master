@@ -6,20 +6,10 @@ pipeline {
             git branch: 'main', url: 'https://github.com/ravitejakandagatla/HelloWorld-Springboot-App-master.git'
         }
     }
-    stage('Maven Test'){
+    stage('Create Dockerimage'){
             steps{
-            bat 'mvn test'
-        }
-    }
-    stage('Maven Build'){
-            steps{
-            bat 'mvn package'
-        }
-    }
-    stage('Maven Deploy'){
-            steps{
-            echo "Deployinh the war file to server"
-        }
-    }
-}
+            bat 'docker build -t ravit/springboot:latest.'
+         }
+     }
+  }
 }
