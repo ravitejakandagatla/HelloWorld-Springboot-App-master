@@ -13,7 +13,7 @@ pipeline {
        }           
     stage('Create Dockerimage'){
             steps{
-            bat 'docker build -t mybuildimage --target build-env  .'
+            bat 'docker build -t raviteja98/mycustomimage:latest  .'
          }
      }
   }
