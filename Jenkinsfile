@@ -8,7 +8,7 @@ pipeline {
     }
     stage('Create Dockerimage'){
             steps{
-            bat 'docker build -t springboot:latest.'
+            bat 'docker build -t ravitejakandagatla/springboot:latest.'
          }
      }
   }
