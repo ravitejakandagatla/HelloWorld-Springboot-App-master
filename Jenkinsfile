@@ -16,5 +16,10 @@ pipeline {
             bat 'docker build -t raviteja98/mycustomimage:latest  .'
          }
      }
+    stage('Maven Deploy'){
+            steps{
+            echo "Deployinh the war file to server"
+        }
+    }
   }
 }
